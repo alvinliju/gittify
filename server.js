@@ -15,11 +15,16 @@ app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
+//testing deployment
+app.get('/', (req, res) => {
+    res.send("hello world")
+})
 
 // basic routes
 app.get('/api/v1/analysis/:username', (req, res) => {
     const username = req.params.username
     console.log(username)
+    res.send("hello world")
 })
 
 
